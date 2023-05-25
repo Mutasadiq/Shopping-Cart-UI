@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Header Section  -->
+    <header
+      class="flex items-center justify-between bg-orange-600 bg-opacity-80 min-h-fit p-8 w-full"
+    >
+      <h1 class="text-white text-5xl">Welcome to the Shopping Cart</h1>
+      <img
+        src="/Shopping-Cart-PNG-Picture.png"
+        class="h-36"
+        alt="Shopping Cart"
+      />
+    </header>
+
+    <!-- Products Sections  -->
+    <section class="container flex items-center justify-evenly mt-20">
+      <div class="border-2 rounded pt-4 ps-4 pe-28 pb-4">
+        <h1 class="text-2xl font-bold">Oil</h1>
+        <img
+          src="/Lovepik_com-401703097-hand-drawn-elements-cooking-oil.png"
+          class="h-28 mt-4"
+          alt=""
+        />
+        <p class="block mt-3 font-semibold">
+          RS <span class="font-semibold">700 </span>
+        </p>
+        <button
+          class="rounded-xl bg-orange-600 px-4 py-2 mt-3 text-blue-50 btn-cart"
+        >
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="border-2 rounded pt-4 ps-4 pe-20 pb-4">
+        <h1 class="text-2xl font-bold">Sugar</h1>
+        <img src="/sugar-clipart-md.png" class="h-28 mt-4" alt="" />
+        <p class="block mt-3 font-semibold">
+          RS <span class="font-semibold">1500</span>
+        </p>
+        <button
+          class="rounded-xl bg-orange-600 px-4 py-2 mt-3 text-white btn-cart"
+        >
+          Add to Cart
+        </button>
+      </div>
+
+      <div class="border-2 rounded pt-4 ps-4 pe-28 pb-4">
+        <h1 class="text-2xl font-bold">Flour</h1>
+        <img src="/flour-37488.png" class="h-28 mt-4" alt="" />
+        <p class="block mt-3 font-semibold">
+          RS <span class="font-semibold">1100</span>
+        </p>
+        <button
+          class="rounded-xl bg-orange-600 px-4 py-2 mt-3 text-slate btn-cart"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </section>
+
+    <!-- Add to Cart Section  -->
+    <section class="container mt-10 px-20 w-full mx-auto">
+      <h1 class="text-3xl mt-16">Add to Cart</h1>
+      <table class="table-auto mt-10 border-collapse">
+        <thead>
+          <tr>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              ID
+            </th>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              Product
+            </th>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              Price
+            </th>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </section>
+
+    <!-- Item and Total Price Section  -->
+    <section class="container px-9 mt-5 w-full mx-auto overflow-auto">
+      <table class="table-auto mt-10 border-collapse float-right">
+        <thead>
+          <tr>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              Items
+            </th>
+            <th class="px-10 py-2 text-emerald-600 border-2 border-emerald-800">
+              Total
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="table-row">
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="container mx-auto btn mt-10 mb-3 flex justify-end">
+      <button
+        class="bg-blue-700 rounded-2xl px-9 py-3 me-3 text-white"
+        id="empty-cart"
+      >
+        Empty Cart
+      </button>
+      <button
+        class="bg-orange-700 rounded-2xl px-9 py-3 text-white"
+        onclick="CheckOut()"
+      >
+        Checkout
+      </button>
+    </section>
+    <!-- <script src="script.js"></script> -->
+    <script src="scriptui.js"></script>
+  </body>
+</html>
